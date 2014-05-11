@@ -8,5 +8,10 @@
   },
   "repository": "",
   "author": "seykron <seykron@partidopirata.com.ar>",
-  "license": "GPLv2"
+  "license": "GPLv2",
+  "dependencies": {
+    "express": "3.5",
+    "node-uuid": "*",
+    "express3-handlebars": "*"
+  }
 }
