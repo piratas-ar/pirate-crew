@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Afiliador del Partido Pirata Argentino</title>
+  </head>
+  <body>
+    <form action="/unaffiliate" method="post">
+      <a href="/">Quiero seguir siendo un pirata</a>
+
+      {{#if error}}
+        <p>No pudimos desafiliarte. El código de afiliado o la contraseña son incorrectos. Por favor, volvé a intentar.</p>
+      {{/if}}
+      <p>
+      Para desafiliarte del Partido Pirata ingresá tu código de afiliado y
+      contraseña:
+      </p>
+      <label>
+        Código de afiliado:
+        <input type="text" name="id" />
+      </label>
+      <label>
+        Contraseña:
+        <input type="password" name="password" />
+      </label>
+      <label>
+      <button type="submit">Desafiliarme</button>
+    </form>
+  </body>
+</html>

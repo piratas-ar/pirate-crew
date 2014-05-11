@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Afiliador del Partido Pirata Argentino</title>
+  </head>
+  <body>
+    <form action="/" method="post">
+      <p>
+      Este es el formulario de afiliación para apoyar la creación del Partido Pirata Argentino. Necesitamos recolectar 4000 firmas para lograrlo, y sobre todo tu participación. Muchas gracias por sumarte a la propuesta.
+      </p>
+      <p>
+      Cantidad de miembros que ya nos ayudaron: {{membersCount}}
+      </p>
+      <label>
+        Nombre completo:
+        <input type="text" name="firstName" />
+      </label>
+      <label>
+        Apellido:
+        <input type="text" name="lastName" />
+      </label>
+      <label>
+        DNI:
+        <input type="text" name="document" />
+      </label>
+      <label>
+        Contraseña de afiliado:
+        <input type="password" name="password" />
+      </label>
+      <label>
+      <button type="submit">Afiliarme!</button>
+    </form>
+    <p>
+    ¿Te arrepentiste?, no te preocupes, podés desafiliarte <a href="/unaffiliate">acá</a> con tu código de afiliado.
+    </p>
+  </body>
+</html>
