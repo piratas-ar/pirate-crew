@@ -1,0 +1,12 @@
+{
+  "name": "afiliador-pirata",
+  "version": "1.0.0",
+  "description": "Herramienta para juntar adhesiones y afiliaciones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "seykron <seykron@partidopirata.com.ar>",
+  "license": "GPLv2"
+}
