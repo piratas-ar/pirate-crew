@@ -23,7 +23,12 @@ app.post("/", function (req, res) {
     id: id,
     firstName: req.param("firstName"),
     lastName: req.param("lastName"),
-    document: req.param("document")
+    dateOfBirth: req.param("dateOfBirth"),
+    document: req.param("document"),
+    email: req.param("email"),
+    commune: req.param("commune"),
+    address: req.param("address"),
+    cp: req.param("cp")
   }, function (err, bundleFile) {
     res.render("affiliate_success.html", {
       affiliationCode: id

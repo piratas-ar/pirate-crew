@@ -1,3 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 20%;
+}
+
+h1, h1 > img {
+  vertical-align: middle;
+}
+
 label {
-  display: block;
+  display: inline-block;
+  height: 40px;
+  margin-left: 10px;
+}
+
+label > span:first-child {
+  display: inline-block;
+  width: 180px;
+}
+
+input {
+  border: 1px solid #808080;
+  padding: 5px;
+}
+
+fieldset {
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.actions {
+  text-align: right;
+}
+
+.main-action {
+  background: #000000;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  color: #efefef;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
 }

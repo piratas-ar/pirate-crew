@@ -6,29 +6,79 @@
   <body>
     <form action="/" method="post">
       <p>
-      Este es el formulario de afiliación para apoyar la creación del Partido Pirata Argentino. Necesitamos recolectar 4000 firmas para lograrlo, y sobre todo tu participación. Muchas gracias por sumarte a la propuesta.
+      Este es el formulario de afiliación para apoyar la creación del Partido Pirata Argentino. Necesitamos recolectar <a href="http://wiki.partidopirata.com.ar/Como_crear_un_partido_pol%C3%ADtico" target="_blank">4000 afiliaciones para lograrlo</a>, y sobre todo necesitamos tu participación. Muchas gracias por sumarte a la propuesta.
       </p>
       <p>
-      Cantidad de miembros que ya nos ayudaron: {{membersCount}}
+      Cantidad de piratas que ya abordaron la flota: {{membersCount}}
       </p>
-      <label>
-        Nombre completo:
-        <input type="text" name="firstName" />
-      </label>
-      <label>
-        Apellido:
-        <input type="text" name="lastName" />
-      </label>
-      <label>
-        DNI:
-        <input type="text" name="document" />
-      </label>
-      <label>
-        Contraseña de afiliado:
-        <input type="password" name="password" />
-      </label>
-      <label>
-      <button type="submit">Afiliarme!</button>
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label>
+          <span>Nombre completo:</span>
+          <input type="text" name="firstName">
+        </label>
+        <label>
+          <span>Apellido:</span>
+          <input type="text" name="lastName">
+        </label>
+        <label>
+          <span>Fecha de nacimiento:</span>
+          <input type="text" name="dateOfBirth">
+        </label>
+        <label>
+          <span>DNI:</span>
+          <input type="text" name="document">
+        </label>
+        <label>
+          <span>Correo electrónico:</span>
+          <input type="text" name="email">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Datos del domicilio</legend>
+        <label>
+          <span>Localidad:</span> Ciudad Autónoma de Buenos Aires <a href="javascript;"
+          title="Por ahora sólo podemos recolectar adhesiones para constituir el partido en la Ciudad de Buenos Aires. Si querés empezar un barco en tu región contactate con nosotros y te ayudamos :)">?</a>
+        </label>
+        <label>
+          <span>Comuna:</span>
+          <select name="commune">
+            <option value="1">Comuna 1 - Retiro, San Nicolás, Puerto Madero, San Telmo, Montserrat y Constitución</option>
+            <option value="2">Comuna 2 - Recoleta</option>
+            <option value="3">Comuna 3 - Balvanera y San Cristóbal</option>
+            <option value="4">Comuna 4 - La Boca, Barracas, Parque Patricios, y Nueva Pompeya</option>
+            <option value="5">Comuna 5 - Almagro y Boedo</option>
+            <option value="6">Comuna 6 - Caballito</option>
+            <option value="7">Comuna 7 - Flores y Parque Chacabuco</option>
+            <option value="8">Comuna 8 - Villa Soldati, Villa Riachuelo y Villa Lugano</option>
+            <option value="9">Comuna 9 - Liniers, Mataderos y Parque Avellaneda</option>
+            <option value="10">Comuna 10 - Villa Real, Monte Castro, Versalles, Floresta, Vélez Sarsfield y Villa Luro</option>
+            <option value="11">Comuna 11 - Villa General Mitre, Villa Devoto, Villa del Parque y Villa Santa Rita</option>
+            <option value="12">Comuna 12 - Coghlan, Saavedra, Villa Urquiza y Villa Pueyrredón</option>
+            <option value="13">Comuna 13 - Núñez, Belgrano y Colegiales</option>
+            <option value="14">Comuna 14 - Palermo</option>
+            <option value="15">Comuna 15 - Chacarita, Villa Crespo, La Paternal, Villa Ortúzar, Agronomía y Parque Chas</option>
+          </select>
+        </label>
+        <label>
+          <span>Dirección:</span>
+          <input type="text" name="address">
+        </label>
+        <label>
+          <span>Código Postal:</span>
+          <input type="text" name="cp">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Datos de la cuenta</legend>
+        <label>
+          <span>Contraseña de afiliado:</span>
+          <input type="password" name="password">
+        </label>
+      </fieldset>
+      <p class="actions">
+        <button class="main-action" type="submit">Afiliarme!</button>
+      </p>
     </form>
     <p>
       La seguridad de los datos es fundamental. Si querés saber cómo hacemos para asegurar tus datos <a href="https://github.com/piratas-ar/pirate-crew">enterate acá.</a>
