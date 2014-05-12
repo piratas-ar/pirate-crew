@@ -11,14 +11,15 @@
       <p>
       Cantidad de piratas que ya abordaron la flota: {{membersCount}}
       </p>
+      <p><strong>Por favor, completar los datos tal cual aparecen en el DNI</strong></p>
       <fieldset>
         <legend>Datos personales</legend>
         <label>
-          <span>Nombre completo:</span>
+          <span>Nombre(s) completo:</span>
           <input type="text" name="firstName">
         </label>
         <label>
-          <span>Apellido:</span>
+          <span>Apellido (sólo el de solterx):</span>
           <input type="text" name="lastName">
         </label>
         <label>
@@ -26,8 +27,40 @@
           <input type="text" name="dateOfBirth">
         </label>
         <label>
-          <span>DNI:</span>
+          <span>Lugar de nacimiento (sólo nombre de la provincia o país):</span>
+          <input type="text" name="placeOfBirth">
+        </label>
+        <label>
+          <span>Tipo de Documento:</span>
+          <select name="c">
+            <option value="dni">DNI</option>
+            <option value="le">LE</option>
+            <option value="lc">LC</option>
+          </select>
+        </label>
+        <label>
+          <span>Número de Documento:</span>
           <input type="text" name="document">
+        </label>
+        <label>
+          <span>Sexo:</span>
+          <select name="genre">
+            <option value="m">Masculino</option>
+            <option value="f">Femenino</option>
+          </select>
+        </label>
+        <label>
+          <span>Profesión u Oficio:</span>
+          <input type="text" name="job">
+        </label>
+        <label>
+          <span>Estado Civil:</span>
+          <select name="maritalStatus">
+            <option value="single">Solterx</option>
+            <option value="married">Casadx</option>
+            <option value="divorced">Divorciadx</option>
+            <option value="widow">Viudx</option>
+          </select>
         </label>
         <label>
           <span>Correo electrónico:</span>
@@ -35,9 +68,9 @@
         </label>
       </fieldset>
       <fieldset>
-        <legend>Datos del domicilio</legend>
+        <legend>Datos del domicilio (como figura en el DNI)</legend>
         <label>
-          <span>Localidad:</span> Ciudad Autónoma de Buenos Aires <a href="javascript;"
+          <span>Localidad:</span> Ciudad Autónoma de Buenos Aires <a href="javascript:;"
           title="Por ahora sólo podemos recolectar adhesiones para constituir el partido en la Ciudad de Buenos Aires. Si querés empezar un barco en tu región contactate con nosotros y te ayudamos :)">?</a>
         </label>
         <label>
@@ -61,8 +94,20 @@
           </select>
         </label>
         <label>
-          <span>Dirección:</span>
-          <input type="text" name="address">
+          <span>Calle:</span>
+          <input type="text" name="street">
+        </label>
+        <label>
+          <span>Número:</span>
+          <input type="text" name="streetNumber">
+        </label>
+        <label>
+          <span>Piso:</span>
+          <input type="text" name="floor">
+        </label>
+        <label>
+          <span>Departamento:</span>
+          <input type="text" name="apartment">
         </label>
         <label>
           <span>Código Postal:</span>
@@ -71,6 +116,11 @@
       </fieldset>
       <fieldset>
         <legend>Datos de la cuenta</legend>
+        <label>
+          <span>Nickname:</span>
+          <input type="text" name="nickname"><a href="javascript:;"
+          title="Como tus datos quedan encriptados, este apodo se envía por email a un contacto del partido junto con tu email para que puedan ponerse en contacto con vos.">?</a>
+        </label>
         <label>
           <span>Contraseña de afiliado:</span>
           <input type="password" name="password">

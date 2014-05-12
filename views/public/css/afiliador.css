@@ -16,12 +16,18 @@ label {
 
 label > span:first-child {
   display: inline-block;
+  vertical-align: middle;
   width: 180px;
 }
 
 input {
   border: 1px solid #808080;
   padding: 5px;
+  vertical-align: middle;
+}
+
+select[name="documentType"] {
+  width: 88px;
 }
 
 fieldset {

@@ -24,11 +24,20 @@ app.post("/", function (req, res) {
     firstName: req.param("firstName"),
     lastName: req.param("lastName"),
     dateOfBirth: req.param("dateOfBirth"),
+    placeOfBirth: req.param("placeOfBirth"),
+    documentType: req.param("documentType"),
     document: req.param("document"),
+    genre: req.param("genre"),
+    job: req.param("job"),
+    maritalStatus: req.param("maritalStatus"),
     email: req.param("email"),
     commune: req.param("commune"),
-    address: req.param("address"),
-    cp: req.param("cp")
+    street: req.param("street"),
+    streetNumber: req.param("streetNumber"),
+    floor: req.param("floor"),
+    apartment: req.param("apartment"),
+    cp: req.param("cp"),
+    nickname: req.param("nickname")
   }, function (err, bundleFile) {
     res.render("affiliate_success.html", {
       affiliationCode: id
