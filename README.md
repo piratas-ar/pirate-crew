@@ -1,6 +1,6 @@
 # Afiliador Pirata
 
-Herramienta para recolectar adhesiones y afiliaciones.
+Herramienta para recolectar adhesiones y afiliaciones. El proceso de consenso está documentado acá: https://wiki.partidopirata.com.ar/Afiliador
 
 ## Requisitos
 
