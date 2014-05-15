@@ -11,7 +11,9 @@ Herramienta para recolectar adhesiones y afiliaciones. El proceso de consenso es
 ## Instalación
 
 ```
-  npm install pirate-crew
+  $ git clone https://github.com/piratas-ar/pirate-crew
+  $ npm install
+  $ ./start.sh
 ```
 
 ## Esquema de seguridad
