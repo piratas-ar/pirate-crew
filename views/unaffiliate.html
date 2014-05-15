@@ -4,21 +4,21 @@
     <title>Afiliador del Partido Pirata Argentino</title>
   </head>
   <body>
-    <form action="/unaffiliate" method="post">
+    <form class="js-unaffiliate" action="/unaffiliate" method="post">
       <a href="/">Quiero seguir siendo un pirata</a>
 
       {{#if error}}
         <p>No pudimos desafiliarte. El código de afiliado o la contraseña son incorrectos. Por favor, volvé a intentar.</p>
       {{/if}}
       <p>
-      Para desafiliarte del Partido Pirata ingresá tu código de afiliado y
+      Para desafiliarte del Partido Pirata ingresá tu número de documento y
       contraseña:
       </p>
       <fieldset>
         <legend>Desafiliación</legend>
         <label>
-          <span>Código de afiliado:</span>
-          <input type="text" name="id" />
+          <span>Número de Documento:</span>
+          <input type="text" name="document" />
         </label>
         <label>
           <span>Contraseña:</span>
@@ -29,5 +29,27 @@
         <button class="main-action" type="submit">Desafiliarme</button>
       </p>
     </form>
+    <form class="js-unaffiliate-shadow" action="/unaffiliate" method="post">
+      <input name="id" type="hidden">
+    </form>
+
+    <script type="text/javascript" src="/js/openpgp.min.js"></script>
+    <script type="text/javascript">
+      jQuery(function () {
+        jQuery(".js-unaffiliate").submit(function (event) {
+          var documentId = jQuery("input[name='document']").val();
+          var password = jQuery("input[name='password']").val();
+          var hash = openpgp.crypto.hash.sha1(documentId + ":" + password);
+          var id = openpgp.util.hexstrdump(hash);
+
+          event.preventDefault();
+
+          jQuery("input[name='id']").val(id);
+
+          // Submits only the form with the user id.
+          jQuery(".js-unaffiliate-shadow").submit();
+        });
+      });
+    </script>
   </body>
 </html>

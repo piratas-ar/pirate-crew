@@ -4,7 +4,7 @@
     <title>Afiliador del Partido Pirata Argentino</title>
   </head>
   <body>
-    <form action="/" method="post">
+    <form class="js-affiliate-form" action="/" method="post">
       <p>
       Este es el formulario de afiliación para apoyar la creación del Partido Pirata Argentino. Necesitamos recolectar <a href="http://wiki.partidopirata.com.ar/Como_crear_un_partido_pol%C3%ADtico" target="_blank">4000 afiliaciones para lograrlo</a>, y sobre todo necesitamos tu participación. Muchas gracias por sumarte a la propuesta.
       </p>
@@ -32,7 +32,7 @@
         </label>
         <label>
           <span>Tipo de Documento:</span>
-          <select name="c">
+          <select name="documentType">
             <option value="dni">DNI</option>
             <option value="le">LE</option>
             <option value="lc">LC</option>
@@ -61,10 +61,6 @@
             <option value="divorced">Divorciadx</option>
             <option value="widow">Viudx</option>
           </select>
-        </label>
-        <label>
-          <span>Correo electrónico:</span>
-          <input type="text" name="email">
         </label>
       </fieldset>
       <fieldset>
@@ -114,6 +110,8 @@
           <input type="text" name="cp">
         </label>
       </fieldset>
+    </form>
+    <form class="js-account-info-form" action="/user/create" method="post">
       <fieldset>
         <legend>Datos de la cuenta</legend>
         <label>
@@ -122,12 +120,16 @@
           title="Como tus datos quedan encriptados, este apodo se envía por email a un contacto del partido junto con tu email para que puedan ponerse en contacto con vos.">?</a>
         </label>
         <label>
+          <span>Correo electrónico:</span>
+          <input type="text" name="email">
+        </label>
+        <label>
           <span>Contraseña de afiliado:</span>
           <input type="password" name="password">
         </label>
       </fieldset>
       <p class="actions">
-        <button class="main-action" type="submit">Afiliarme!</button>
+        <button type="submit">Afiliarme!</button>
       </p>
     </form>
     <p>
@@ -136,5 +138,18 @@
     <p>
     ¿Te arrepentiste?, no te preocupes, podés desafiliarte <a href="/unaffiliate">acá</a> con tu código de afiliado.
     </p>
+
+    <script type="text/javascript" src="/js/openpgp.min.js"></script>
+    <script type="text/javascript" src="/js/json3.min.js"></script>
+    <script type="text/javascript" src="/js/AffiliateView.js"></script>
+    <script type="gpg/publicKey" class="js-public-key">
+      {{publicKey}}
+    </script>
+    <script type="text/javascript">
+      jQuery(function () {
+        var view = new AffiliateView(jQuery(document.body));
+        view.render();
+      });
+    </script>
   </body>
 </html>
