@@ -4,9 +4,10 @@
     <title>Afiliador del Partido Pirata Argentino</title>
   </head>
   <body>
+    {{#if error}}<p>{{error}}</p>{{/if}}
     <form class="js-affiliate-form" action="/" method="post">
       <p>
-      Este es el formulario de afiliación para apoyar la creación del Partido Pirata Argentino. Necesitamos recolectar <a href="http://wiki.partidopirata.com.ar/Como_crear_un_partido_pol%C3%ADtico" target="_blank">4000 afiliaciones para lograrlo</a>, y sobre todo necesitamos tu participación. Muchas gracias por sumarte a la propuesta.
+      Este es el formulario de afiliación para apoyar la creación del <a target="_blank" title="¡Leé los Principios Piratas!" href="http://partidopirata.com.ar/principios-piratas/">Partido Pirata Argentino</a>. Necesitamos recolectar <a href="http://wiki.partidopirata.com.ar/Como_crear_un_partido_pol%C3%ADtico" target="_blank">4000 afiliaciones para lograrlo</a>, y sobre todo necesitamos tu participación. Muchas gracias por sumarte a la propuesta.
       </p>
       <p>
       Cantidad de piratas que ya abordaron la flota: {{membersCount}}
@@ -127,6 +128,51 @@
           <span>Contraseña de afiliado:</span>
           <input type="password" name="password">
         </label>
+        <div>
+          <p>Temas de Interés:</p>
+          <p>
+            <label>
+              <input type="checkbox" name="freeCulture">
+              <span>Cultura libre</span>
+            </label>
+            <label>
+              <input type="checkbox" name="copyright">
+              <span>Propiedad intelectual</span>
+            </label>
+            <label>
+              <input type="checkbox" name="surveillance">
+              <span>Vigilancia y privacidad</span>
+            </label>
+            <label>
+              <input type="checkbox" name="resources">
+              <span>Bienes comunes</span>
+            </label>
+            <label>
+              <input type="checkbox" name="infrastructure">
+              <span>Redes libres</span>
+            </label>
+            <label>
+              <input type="checkbox" name="pairProduction">
+              <span>Producción de pares</span>
+            </label>
+            <label>
+              <input type="checkbox" name="coops">
+              <span>Cooperativismo</span>
+            </label>
+            <label>
+              <input type="checkbox" name="education">
+              <span>Educación y autocapacitación</span>
+            </label>
+            <label>
+              <input type="checkbox" name="federalism">
+              <span>Federalismo</span>
+            </label>
+            <label>
+              <input type="checkbox" name="activism">
+              <span>Activismo</span>
+            </label>
+          </p>
+        </div>
       </fieldset>
       <p class="actions">
         <button class="main-action" type="submit">Afiliarme!</button>
@@ -136,7 +182,7 @@
       La seguridad de los datos es fundamental. Si querés saber cómo hacemos para asegurar tus datos <a href="https://github.com/piratas-ar/pirate-crew">enterate acá.</a>
     </p>
     <p>
-    ¿Te arrepentiste?, no te preocupes, podés desafiliarte <a href="/unaffiliate">acá</a> con tu código de afiliado.
+    ¿Te arrepentiste?, no te preocupes, podés desafiliarte <a href="/unaffiliate">acá</a> con tu DNI y contraseña.
     </p>
 
     <script type="text/javascript" src="/js/openpgp.min.js"></script>

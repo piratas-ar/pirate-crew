@@ -1,17 +1,20 @@
 var path = require("path");
 var fs = require("fs");
+var hkp = require('hkp-client');
 
 var Member = require("../lib/Member")
 var MEMBERS_DIR = path.join(__dirname, "..", "members");
 
 app.get("/", function (req, res) {
   var members = fs.readdirSync(MEMBERS_DIR);
-  var publicKey = fs.readFileSync(path.join(__dirname, "..",
-    process.env.KEY_FILE), "ascii");
+  var keyserver = 'http://pgp.mit.edu:11371';
 
-  res.render("affiliate.html", {
-    membersCount: members.length,
-    publicKey: publicKey.toString()
+  hkp.fetch(keyserver, process.env.KEY_ID, function (err, pubKey) {
+    res.render("affiliate.html", {
+      membersCount: members.length,
+      publicKey: pubKey,
+      error: err
+    });
   });
 });
 app.post("/", function (req, res) {

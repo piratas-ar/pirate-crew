@@ -18,15 +18,15 @@ Herramienta para recolectar adhesiones y afiliaciones. El proceso de consenso es
 
 ## Esquema de seguridad
 
-1. Los datos de cada miembro afiliado se guardan en un archivo encriptado con una clave pública generada para este fin.
+1. Los datos de cada miembro afiliado se guardan en un archivo encriptado con una llave pública generada para este fin y que se obtiene directamente de servidores de llaves.
 
-2. La llave privada está partida en tres partes y cada parte la tiene un pirata aleatorio. Se va a utilizar solamente cuando haya que llenar las fichas en papel que hay que presentar en la justicia electoral, y esto requerirá la presencia física de los tres piratas.
+2. La llave privada está partida en tres partes y cada parte la tiene un pirata aleatorio. Se va a utilizar solamente cuando haya que llenar las fichas en papel que hay que presentar en la justicia electoral, y esto requerirá la presencia física de los tres piratas. Vamos a organizar un evento público para generar y dividir la llave privada y distribuir la llave pública.
 
-3. Los miembros pueden desafiliarse con su DNI y una contraseña, que se utilizan como nombre de archivo en forma de hash SHA1 (este hash se le enviará por email al nuevo afiliado a modo informativo).
+3. Los miembros pueden desafiliarse con su DNI y una contraseña, que se utilizan como nombre de archivo en forma de hash SHA1 (como no queremos relacionar email con datos, no tenemos forma de borrar la afiliación de forma automática si el pirata afiliado olvida su contraseña).
 
-4. La encriptación de los datos y la generación del hash DNI/contraseña se hacen en el cliente para evitar que los datos personales lleguen al  servidor. El servidor sólo recibirá el email y un nombre de usuario que **no serán relacionados con el archivo de datos personales**, sino que se usará para notificar al partido de la existencia del nuevo afiliado para darlo de alta en los servicios, y luego se descartarán.
+4. La encriptación de los datos y la generación del hash DNI/contraseña se hacen en el cliente para evitar que los datos personales lleguen al  servidor. El servidor recibe los datos personales encriptados y los de la cuenta de usuario **en dos momentos distintos, de modo que no podemos relacionar a un usuario con sus datos personales**. Los datos de la cuenta se usarán para notificar al partido de la existencia del nuevo afiliado y darlo de alta en los servicios, luego se descartarán.
 
-5. Cuando un miembro se desafilia, los datos encriptados se borran de nuestros servidores.
+5. Cuando un miembro se desafilia, los datos encriptados se borran de nuestros servidores, pero la cuenta sigue activa para que pueda seguir participando de nuestras actividades.
 
 6. Los archivos de datos estarán distribuídos en varios servidores.
 

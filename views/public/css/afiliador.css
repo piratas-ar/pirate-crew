@@ -35,6 +35,10 @@ fieldset {
   margin: 15px 0;
 }
 
+fieldset > div {
+  margin-left: 10px;
+}
+
 .actions {
   text-align: right;
 }
