@@ -13,6 +13,7 @@
     "express": "3.5",
     "express3-handlebars": "*",
     "hkp-client": "*",
-    "nodemailer": "*"
+    "nodemailer": "*",
+    "handlebars": "*"
   }
 }
