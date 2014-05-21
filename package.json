@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "3.5",
     "express3-handlebars": "*",
-    "hkp-client": "*"
+    "hkp-client": "*",
+    "nodemailer": "*"
   }
 }

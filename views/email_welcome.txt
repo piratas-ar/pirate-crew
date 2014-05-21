@@ -1,0 +1,22 @@
+Hola {{userName}}!
+
+Bienvenid@ al PPAr. Te contamos que lo importante para nosotros es la participación. Creemos que a través de las actividades se generan vínculos de amistad que permiten afianzar nuestros principios y trabajar como pares en los proyectos políticos. Para empezar, te sugerimos que leas algunos de los documentos que explican quiénes somos, qué hacemos y cómo lo hacemos:
+
+* Principios Piratas
+  http://partidopirata.com.ar/principios-piratas
+
+* Cómo organizarte y participar en las Asambleas
+  http://wiki.partidopirata.com.ar/Como_Participar
+
+* Cosas para hacer dentro del partido
+  http://wiki.partidopirata.com.ar/Cosas_para_hacer
+
+* Propuestas y actividades en progreso
+  https://wiki.partidopirata.com.ar/Categor%C3%ADa:Propuestas
+
+* Nuestra Carta Orgánica
+  http://partidopirata.com.ar/documentos/CartaOrganica.html
+
+Esperamos conocerte pronto en alguna de nuestras actividades lejos del teclado.
+
+Intereses: {{interests}}
