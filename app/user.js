@@ -15,7 +15,10 @@ app.post("/user/create", function (req, res) {
     req.param("coops"),
     req.param("education"),
     req.param("federalism"),
-    req.param("activism")
+    req.param("activism"),
+    req.param("freeSoftware"),
+    req.param("press"),
+    req.param("politics")
   ];
 
   var mailer = new Mailer(path.join(__dirname, "..", "views", "email_welcome"));

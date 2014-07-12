@@ -3,7 +3,14 @@ var fs = require("fs");
 var hkp = require('hkp-client');
 
 var Member = require("../lib/Member")
-var MEMBERS_DIR = path.join(__dirname, "..", "members");
+var MEMBERS_DIR = (function () {
+  var membersDir = path.join(__dirname, "..", "members");
+  if (!fs.existsSync(membersDir)) {
+    fs.mkdirSync(membersDir);
+  }
+  return membersDir;
+}());
+
 
 app.get("/", function (req, res) {
   var members = fs.readdirSync(MEMBERS_DIR);

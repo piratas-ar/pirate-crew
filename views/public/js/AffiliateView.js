@@ -12,6 +12,20 @@ AffiliateView = function (container) {
   var publicKey = openpgp.key.readArmored(jQuery.trim(
     container.find(".js-public-key").text()));
 
+  /** Pirate account info form.
+   * @type {Element}
+   * @private
+   * @fieldOf AffiliateView#
+   */
+  var accountInfoForm = container.find(".js-account-info-form");
+
+  /** Affiliate form.
+   * @type {Element}
+   * @private
+   * @fieldOf AffiliateView#
+   */
+  var affiliateForm = container.find(".js-affiliate-form");
+
   /** Encrypts the user data and returns the encrypted message.
    *
    * @return {String} Returns a message encrypted with the public key.
@@ -46,6 +60,46 @@ AffiliateView = function (container) {
     return openpgp.util.hexstrdump(hash);
   };
 
+  /** Sets up the initial layout.
+   * @private
+   * @methodOf AffiliateView#
+   */
+  var setupLayout = function () {
+    var district = container.find("select[name=district]").val();
+    container.find(".js-commune").css({
+      display: (district === "CF") ? "block" : "none"
+    });
+  };
+
+  /** Sets up validation for forms.
+   * @private
+   * @methodOf AffiliateView#
+   */
+  var setupValidation = function () {
+    var validateOptions = {
+      errorElement: "span",
+      showErrors: function (errorMap, errorList) {
+        this.defaultShowErrors();
+        container.find("span.error").hide();
+      }
+    };
+
+    affiliateForm.validate(validateOptions);
+    accountInfoForm.validate(validateOptions);
+
+    // Show/hide error on when the user enter or leave a field.
+    container.find("input").focus(function (event) {
+      var input = jQuery(event.target);
+      if (input.hasClass("error")) {
+        input.parent().find(".error").show();
+      }
+    });
+    container.find("input").blur(function (event) {
+      var input = jQuery(event.target);
+      input.parent().find("span.error").hide();
+    });
+  };
+
   /** Initializes DOM event listeners.
    *
    * @private
@@ -54,6 +108,16 @@ AffiliateView = function (container) {
   var initEventListeners = function () {
     var prevent = true;
 
+    container.find(".main-action").click(function (event) {
+      // Show errors.
+      affiliateForm.valid();
+      accountInfoForm.valid();
+
+      if (affiliateForm.valid() && accountInfoForm.valid()) {
+        accountInfoForm.submit();
+      }
+      event.preventDefault();
+    });
     container.find(".js-account-info-form").submit(function (event) {
       if (prevent) {
         var userData = encryptUserData();
@@ -71,6 +135,9 @@ AffiliateView = function (container) {
         event.preventDefault();
       }
     });
+    container.find("select[name=district]").change(function (event) {
+      setupLayout(jQuery(event.target));
+    });
   };
 
   return {
@@ -78,6 +145,8 @@ AffiliateView = function (container) {
      */
     render: function () {
       initEventListeners();
+      setupLayout();
+      setupValidation();
     }
   };
 };

@@ -10,28 +10,34 @@
       Este es el formulario de afiliación para apoyar la creación del <a target="_blank" title="¡Leé los Principios Piratas!" href="http://partidopirata.com.ar/principios-piratas/">Partido Pirata Argentino</a>. Necesitamos recolectar <a href="http://wiki.partidopirata.com.ar/Como_crear_un_partido_pol%C3%ADtico" target="_blank">4000 afiliaciones para lograrlo</a>, y sobre todo necesitamos tu participación. Desde ya te contamos que no necesitás afiliarte para participar de <a href="https://wiki.partidopirata.com.ar/Categor%C3%ADa:Propuestas">nuestras actividades</a> e <a target="_blank" href="https://wiki.partidopirata.com.ar/Cosas_para_hacer">involucrarte en la acción pirata</a>. Muchas gracias por sumarte a la propuesta.
       </p>
       <p>
+        De acuerdo con la normativa de la Cámara Electoral de Argentina, sólo se puede estar afiliado a un partido político. Si querés verificar que no estás afiliado a otro partido podés consultar el <a href="http://www.padron.gov.ar/cne_afiliados/">padrón electoral de afiliados</a>.
+      </p>
+      <p><strong>IMPORTANTE</strong>: todos tus datos se guardan cifrados. Si querés saber más sobre nuestra estrategia para proteger tu privacidad <a href="https://github.com/piratas-ar/pirate-crew">enterate acá</a>.</p>
+      <p>
       Cantidad de piratas que ya abordaron la flota: {{membersCount}}
       </p>
       <p><strong>Por favor, completar los datos tal cual aparecen en el DNI</strong></p>
       <fieldset>
         <legend>Datos personales</legend>
-        <label>
+        <label class="required">
           <span>Nombre(s) completo:</span>
-          <input type="text" name="firstName">
+          <input type="text" name="firstName" required>
         </label>
-        <label>
-          <span>Apellido (sólo el de solterx):</span>
-          <input type="text" name="lastName">
+        <label class="required">
+          <span>Apellido(s):</span>
+          <input type="text" name="lastName" required> <span class="tooltip" title="Solamente el/los apellido/s de soltera/o.">?</span>
         </label>
-        <label>
+        <label class="required">
           <span>Fecha de nacimiento:</span>
-          <input type="text" name="dateOfBirth">
+          <input type="text" name="dateOfBirth" required>
+          <span class="tooltip" title="Por ejemplo: 01/01/1970">?</span>
         </label>
-        <label>
-          <span>Lugar de nacimiento (sólo nombre de la provincia o país):</span>
-          <input type="text" name="placeOfBirth">
+        <label class="required">
+          <span>Lugar de nacimiento:</span>
+          <input type="text" name="placeOfBirth" required> <span class="tooltip"
+            title="Solamente nombre de la provincia o país.">?</span>
         </label>
-        <label>
+        <label class="required">
           <span>Tipo de Documento:</span>
           <select name="documentType">
             <option value="dni">DNI</option>
@@ -39,22 +45,22 @@
             <option value="lc">LC</option>
           </select>
         </label>
-        <label>
+        <label class="required">
           <span>Número de Documento:</span>
-          <input type="text" name="document">
+          <input type="number" name="document" required>
         </label>
-        <label>
+        <label class="required">
           <span>Sexo:</span>
           <select name="genre">
             <option value="m">Masculino</option>
             <option value="f">Femenino</option>
           </select>
         </label>
-        <label>
+        <label class="required">
           <span>Profesión u Oficio:</span>
-          <input type="text" name="job">
+          <input type="text" name="job" required>
         </label>
-        <label>
+        <label class="required">
           <span>Estado Civil:</span>
           <select name="maritalStatus">
             <option value="single">Solterx</option>
@@ -66,11 +72,68 @@
       </fieldset>
       <fieldset>
         <legend>Datos del domicilio (como figura en el DNI)</legend>
-        <label>
-          <span>Localidad:</span> Ciudad Autónoma de Buenos Aires <a href="javascript:;"
-          title="Por ahora sólo podemos recolectar adhesiones para constituir el partido en la Ciudad de Buenos Aires. Si querés empezar un barco en tu región contactate con nosotros y te ayudamos :)">?</a>
+        <label class="required">
+          <span>Provincia/Distrito:</span>
+          <select name="district">
+            <option value="BA">Buenos Aires</option>
+            <option value="CT">Catamarca</option>
+            <option value="CC">Chaco</option>
+            <option value="CF" selected>Ciudad Autónoma de Buenos Aires</option>
+            <option value="CH">Chubut</option>
+            <option value="CD">Córdoba</option>
+            <option value="CR">Corrientes</option>
+            <option value="ER">Entre Ríos</option>
+            <option value="FO">Formosa</option>
+            <option value="JY">Jujuy</option>
+            <option value="LP">La Pampa</option>
+            <option value="LR">La Rioja</option>
+            <option value="MZ">Mendoza</option>
+            <option value="MN">Misiones</option>
+            <option value="NQ">Neuquén</option>
+            <option value="RN">Río Negro</option>
+            <option value="SA">Salta</option>
+            <option value="SJ">San Juan</option>
+            <option value="SL">San Luis</option>
+            <option value="SC">Santa Cruz</option>
+            <option value="SF">Santa Fe</option>
+            <option value="SE">Santiago del Estero</option>
+            <option value="TF">Tierra del Fuego</option>
+            <option value="TM">Tucumán</option>
+          </select>
+          <span class="tooltip"
+          title="Por ahora sólo podemos recolectar afiliaciones para constituir el partido en la Ciudad de Buenos Aires. Si querés empezar un barco en tu región contactate con nosotros y te ayudamos :)">?</span>
+        </label>
+        <label class="required">
+          <span>Calle:</span>
+          <input type="text" name="street" required>
+        </label>
+        <label class="required">
+          <span>Número:</span>
+          <input type="text" name="streetNumber" required>
         </label>
         <label>
+          <span>Piso:</span>
+          <input type="text" name="floor">
+        </label>
+        <label>
+          <span>Departamento:</span>
+          <input type="text" name="apartment">
+        </label>
+        <label class="required">
+          <span>Código Postal:</span>
+          <input type="text" name="cp" required>
+          <a target="_blank"
+            href="http://www.correoargentino.com.ar/formularios/cpa">Buscar</a>
+        </label>
+      </fieldset>
+    </form>
+    <form class="js-account-info-form" action="/user/create" method="post">
+      <fieldset>
+        <legend>Datos de la cuenta</legend>
+        <p>
+          Esta información no se guardará ni tendrá vínculos con tus datos personales.
+        </p>
+        <label class="js-commune required">
           <span>Comuna:</span>
           <select name="commune">
             <option value="1">Comuna 1 - Retiro, San Nicolás, Puerto Madero, San Telmo, Montserrat y Constitución</option>
@@ -90,43 +153,20 @@
             <option value="15">Comuna 15 - Chacarita, Villa Crespo, La Paternal, Villa Ortúzar, Agronomía y Parque Chas</option>
           </select>
         </label>
-        <label>
-          <span>Calle:</span>
-          <input type="text" name="street">
+        <label class="required">
+          <span>Nick/Apodo:</span>
+          <input type="text" name="nickname" required> <span class="tooltip"
+          title="Como tus datos quedan encriptados, este nick va a ser tu nombre pirata con el que te van a reconocer los demás piratas en la Asamblea.">?</span>
         </label>
-        <label>
-          <span>Número:</span>
-          <input type="text" name="streetNumber">
-        </label>
-        <label>
-          <span>Piso:</span>
-          <input type="text" name="floor">
-        </label>
-        <label>
-          <span>Departamento:</span>
-          <input type="text" name="apartment">
-        </label>
-        <label>
-          <span>Código Postal:</span>
-          <input type="text" name="cp">
-        </label>
-      </fieldset>
-    </form>
-    <form class="js-account-info-form" action="/user/create" method="post">
-      <fieldset>
-        <legend>Datos de la cuenta</legend>
-        <label>
-          <span>Nickname:</span>
-          <input type="text" name="nickname"><a href="javascript:;"
-          title="Como tus datos quedan encriptados, este apodo se envía por email a un contacto del partido junto con tu email para que puedan ponerse en contacto con vos.">?</a>
-        </label>
-        <label>
+        <label class="required">
           <span>Correo electrónico:</span>
-          <input type="text" name="email">
+          <input type="email" name="email" required> <span class="tooltip"
+          title="Con este email te vamos a subscribir a la lista de correo de la Asamblea Permanente para ponerte en contacto con otros piratas.">?</span>
         </label>
-        <label>
+        <label class="required">
           <span>Contraseña de afiliado:</span>
-          <input type="password" name="password">
+          <input type="password" name="password" required> <span class="tooltip"
+          title="Si te arrepentiste y querés desafiliarte, con esta contraseña más tu DNI vas a poder hacerlo automáticamente. Si te olvidás esta contraseña vas a tener que ponerte en contacto con nosotros, ya que no guardamos la constraseña de ninguna forma.">?</span>
         </label>
         <div>
           <p>Temas de Interés:</p>
@@ -144,7 +184,7 @@
               <span>Vigilancia y privacidad</span>
             </label>
             <label>
-              <input type="checkbox" name="commonResources" value="Bienes comunes">
+              <input type="checkbox" name="commonGoods" value="Bienes comunes">
               <span>Bienes comunes</span>
             </label>
             <label>
@@ -164,12 +204,20 @@
               <span>Educación y autocapacitación</span>
             </label>
             <label>
-              <input type="checkbox" name="federalism" value="Federalismo">
-              <span>Federalismo</span>
-            </label>
-            <label>
               <input type="checkbox" name="activism" value="(Hack)ctivismo">
               <span>(Hack)ctivismo</span>
+            </label>
+            <label>
+              <input type="checkbox" name="freeSoftware" value="Hardware y software libre">
+              <span>Hardware y software libre</span>
+            </label>
+            <label>
+              <input type="checkbox" name="press" value="Comunicación/Prensa">
+              <span>Comunicación/Prensa</span>
+            </label>
+            <label>
+              <input type="checkbox" name="politics" value="Política">
+              <span>Política</span>
             </label>
           </p>
         </div>
@@ -179,14 +227,15 @@
       </p>
     </form>
     <p>
-      La seguridad de los datos es fundamental. Si querés saber cómo hacemos para asegurar tus datos <a href="https://github.com/piratas-ar/pirate-crew">enterate acá.</a>
-    </p>
-    <p>
     ¿Te arrepentiste?, no te preocupes, podés desafiliarte <a href="/unaffiliate">acá</a> con tu DNI y contraseña.
     </p>
 
     <script type="text/javascript" src="/js/openpgp.min.js"></script>
     <script type="text/javascript" src="/js/json3.min.js"></script>
+    <script type="text/javascript"
+      src="/js/jquery-validation/jquery.validate.min.js"></script>
+    <script type="text/javascript"
+      src="/js/jquery-validation/localization/messages_es.min.js"></script>
     <script type="text/javascript" src="/js/AffiliateView.js"></script>
     <script type="gpg/publicKey" class="js-public-key">
       {{publicKey}}

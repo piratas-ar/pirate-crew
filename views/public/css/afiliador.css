@@ -1,23 +1,58 @@
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  margin: 0 20%;
+  margin: 0 18%;
 }
 
 h1, h1 > img {
   vertical-align: middle;
 }
 
+a:link, a:visited {
+  color: #666666;
+}
+
+a:hover {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+
 label {
   display: inline-block;
   height: 40px;
   margin-left: 10px;
+  position: relative;
 }
 
 label > span:first-child {
   display: inline-block;
   vertical-align: middle;
   width: 180px;
+}
+
+label > input.error {
+  border: 1px solid #aa0000;
+  box-shadow: 0px 0px 5px #AA0000;
+}
+
+label > span.error {
+  background: none repeat scroll 0% 0% #F8BEBE;
+  border: 1px solid #540000;
+  border-radius: 6px;
+  color: #660000;
+  font-size: 13px;
+  padding: 5px;
+  position: absolute;
+  left: 101%;
+  top: 0;
+  width: 180px;
+  z-index: 10;
+}
+
+.required span:first-child:before {
+  color: #FF0000;
+  content: "* ";
+  vertical-align: middle;
 }
 
 input {
@@ -35,7 +70,7 @@ fieldset {
   margin: 15px 0;
 }
 
-fieldset > div {
+fieldset > div, fieldset > p {
   margin-left: 10px;
 }
 
@@ -52,4 +87,16 @@ fieldset > div {
   font-size: 16px;
   font-weight: bold;
   padding: 8px;
+}
+
+/** Tooltips */
+.tooltip {
+  background: url(../images/icon-help-16.png) no-repeat 0 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  text-decoration: none;
+  text-indent: -9999px;
+  vertical-align: middle;
+  width: 16px;
 }

@@ -32,17 +32,10 @@ Herramienta para recolectar adhesiones y afiliaciones. El proceso de consenso es
 
 Este esquema de seguridad permite que nadie con acceso físico o remoto a nuestros servidores pueda leer la información de los miembros, por más que lograra descargarse los archivos de datos.
 
-## TODO
-
-Cosas para hacer:
-
-* Enviarle por email al nuevo afiliado el código de afiliación para que no se pierda.
-
-* Enviar por email el contacto de la persona para darle la bienvenida y hacer el alta en la infraestructura del partido.
+## Cosas para hacer
 
 * Automatizar la desencriptación de datos con la clave privada (conviene que sea una herramienta a parte).
 
 * Definir el proceso para desafiliar gente que perdió el código de afiliación o contraseña.
 
 * Definir el proceso para volcar los datos a las fichas.
-

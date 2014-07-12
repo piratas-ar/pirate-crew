@@ -1,6 +1,6 @@
-Hola {{userName}}!
+Hola {{userName}},
 
-Bienvenid@ al PPAr. Te contamos que lo importante para nosotros es la participación. Creemos que a través de las actividades se generan vínculos de amistad que permiten afianzar nuestros principios y trabajar como pares en los proyectos políticos. Para empezar, te sugerimos que leas algunos de los documentos que explican quiénes somos, qué hacemos y cómo lo hacemos:
+¡Te bienvenimos, ahora sos pirata!. Para empezar, te sugerimos que leas algunos de los documentos que explican quiénes somos, qué hacemos y cómo lo hacemos:
 
 * Principios Piratas
   http://partidopirata.com.ar/principios-piratas
@@ -17,6 +17,10 @@ Bienvenid@ al PPAr. Te contamos que lo importante para nosotros es la participac
 * Nuestra Carta Orgánica
   http://partidopirata.com.ar/documentos/CartaOrganica.html
 
+Como segundo paso, te presentamos a tus piratas sombra [1]: {{shadows}}. Ellos están para ayudarte a integrarte al grupo, así que podés hacerles todas las preguntas que quieras.
+
 Esperamos conocerte pronto en alguna de nuestras actividades lejos del teclado.
 
 Intereses: {{interests}}
+
+[1] Los piratas sombra son personas que llevan algún tiempo en el partido y pueden ayudarte a entender la dinámica de los grupos. Podés encontrar más información en la wiki: https://wiki.partidopirata.com.ar/Ayuda:Sombra_pirata

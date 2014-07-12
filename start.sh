@@ -6,6 +6,6 @@ export MAIL_PORT=587
 export MAIL_USER=
 export MAIL_PASSWD=
 export MAIL_FROM=afiliaciones@partidopirata.com.ar
-#export MAIL_CC=general@asambleas.partidopirata.com.ar
+export MAIL_CC=general@asambleas.partidopirata.com.ar
 
 node index.js
