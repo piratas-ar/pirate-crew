@@ -2,8 +2,14 @@ Hola {{userName}},
 
 ¡Te bienvenimos, ahora sos pirata!. Para empezar, te sugerimos que leas algunos de los documentos que explican quiénes somos, qué hacemos y cómo lo hacemos:
 
-* Principios Piratas
-  http://partidopirata.com.ar/principios-piratas
+* Principios piratas
+  http://wiki.partidopirata.com.ar/Declaración_de_Principios_Partido_Pirata_Argentino
+
+* Bases de acción política
+  http://wiki.partidopirata.com.ar/Bases_de_Acción_Política
+
+* Nuestra Carta Orgánica
+  http://partidopirata.com.ar/documentos/CartaOrganica.html
 
 * Cómo organizarte y participar en las Asambleas
   http://wiki.partidopirata.com.ar/Como_Participar
@@ -13,9 +19,6 @@ Hola {{userName}},
 
 * Propuestas y actividades en progreso
   https://wiki.partidopirata.com.ar/Categor%C3%ADa:Propuestas
-
-* Nuestra Carta Orgánica
-  http://partidopirata.com.ar/documentos/CartaOrganica.html
 
 Como segundo paso, te presentamos a tus piratas sombra [1]: {{shadows}}. Ellos están para ayudarte a integrarte al grupo, así que podés hacerles todas las preguntas que quieras.
 

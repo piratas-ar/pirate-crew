@@ -1,0 +1,46 @@
+{
+  "pirates": {
+    "fauno": {
+      "name": "fauno",
+      "email": "fauno@partidopirata.com.ar",
+      "interests": ["freeCulture", "copyright", "surveillance", "commonGoods",
+      "infrastructure", "pairProduction", "coops", "activism", "freeSoftware",
+      "press", "politics"]
+    },
+    "aza": {
+      "name": "aza",
+      "email": "aza@partidopirata.com.ar",
+      "interests": ["freeCulture", "copyright", "surveillance", "commonGoods",
+      "infrastructure", "pairProduction", "coops", "activism", "freeSoftware",
+      "press", "politics"]
+    },
+    "seykron": {
+      "name": "seykron",
+      "email": "seykron@partidopirata.com.ar",
+      "interests": ["freeCulture", "copyright", "surveillance", "commonGoods",
+      "infrastructure", "pairProduction", "coops", "activism", "freeSoftware",
+      "press", "politics"]
+    },
+    "mach1ga": {
+      "name": "machunga",
+      "email": "mach1ga@partidopirata.com.ar",
+      "interests": ["freeCulture", "copyright", "surveillance", "commonGoods",
+      "infrastructure", "pairProduction", "coops", "activism", "freeSoftware",
+      "press", "politics"]
+    },
+    "mpj": {
+      "name": "mpj",
+      "email": "mpj@partidopirata.com.ar",
+      "interests": ["freeCulture", "copyright", "surveillance", "commonGoods",
+      "infrastructure", "pairProduction", "coops", "activism", "freeSoftware",
+      "press", "politics"]
+    },
+    "gnu_tesla": {
+      "name": "gnu_tesla",
+      "email": "gnu_tesla@partidopirata.com.ar",
+      "interests": ["freeCulture", "copyright", "surveillance", "commonGoods",
+      "infrastructure", "pairProduction", "coops", "activism", "freeSoftware",
+      "press", "politics"]
+    }
+  }
+}
