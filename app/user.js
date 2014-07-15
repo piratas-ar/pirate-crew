@@ -1,10 +1,14 @@
-var NUMBER_OF_SHADOWS = 2;
-
 var path = require("path");
 var fs = require("fs");
 var Mailer = require("../lib/Mailer");
+var Assembly = require("../lib/Assembly");
+
+var NUMBER_OF_SHADOWS = 2;
+var EMAIL_TEMPLATE = path.join(__dirname, "..", "views", "email_welcome");
+
 var shadows = JSON.parse(fs.readFileSync(path.join(__dirname, "..",
   "shadows.json")));
+var generalAssembly = new Assembly("general");
 
 var getPirates = function () {
   var pirates = [];
@@ -58,6 +62,7 @@ var findShadows = function (interests) {
 app.post("/user/create", function (req, res) {
   var userName = req.param("nickname");
   var email = req.param("email");
+  var password = req.param("password");
   var interests = [
     req.param("freeCulture"),
     req.param("copyright"),
@@ -79,7 +84,7 @@ app.post("/user/create", function (req, res) {
   var cc = shadows.map(function (shadow) {
     return shadow.email;
   });
-  var mailer = new Mailer(path.join(__dirname, "..", "views", "email_welcome"));
+  var mailer = new Mailer(EMAIL_TEMPLATE, cc);
 
   mailer.send(email, {
     userName: userName,
@@ -94,6 +99,7 @@ app.post("/user/create", function (req, res) {
       console.log(responseStatus);
     }
   });
+  generalAssembly.subscribe(userName, email, password);
 
   res.render("affiliate_success.html");
 });
